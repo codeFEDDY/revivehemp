@@ -1,17 +1,34 @@
 ## REVIVE HEMP — Neon Expanse Market
 
-**Immersive GitHub Pages storefront** for Revive Hemp.
+**Immersive GitHub Pages storefront** for Revive Hemp at the custom domain `revivehemp.codefeddy.com`.
 
 Walk the glowing surface markets of Aurora-7. Browse the same premium Revive product tiles featured on [codefeddy.github.io](https://codefeddy.github.io), but fully re-themed around the official neon cyberpunk planet artwork.
 
-## Live (after Pages enabled)
-https://codeFEDDY.github.io/revivehemp/
+## Live Site
+https://revivehemp.codefeddy.com
 
-## Quick Start to Enable GitHub Pages
+## Setup Custom Domain (revivehemp.codefeddy.com)
+
+### 1. DNS Configuration (at your DNS provider for codefeddy.com)
+Create a CNAME record:
+- **Name/Host**: `revivehemp`
+- **Value/Target**: `codeFEDDY.github.io.` (include the trailing dot)
+- TTL: as low as possible (or default)
+
+This is a *subdomain* of your existing `codefeddy.com` custom domain.
+
+### 2. GitHub Repo Configuration
 1. Go to https://github.com/codeFEDDY/revivehemp/settings/pages
-2. Under "Build and deployment" → Source, choose **Deploy from a branch**
-3. Branch: `main`, Folder: `/(root)`
-4. Save. Wait ~1 minute and visit the URL above.
+2. Under "Custom domain", enter exactly: `revivehemp.codefeddy.com`
+3. Click **Save**.
+4. Check the box for **Enforce HTTPS** once the certificate is issued (may take a few minutes).
+
+GitHub will automatically create the required DNS TXT validation records if needed (for the apex it may differ, but for subdomains CNAME is standard).
+
+The `CNAME` file in this repo is already present with `revivehemp.codefeddy.com`.
+
+### 3. Verify
+After DNS propagates (can be 5-60 minutes, sometimes longer), visit https://revivehemp.codefeddy.com
 
 ## Features
 - Exact same 7 Revive Hemp products with authentic discount links (`FEDDY` → 10% off)
