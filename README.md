@@ -1,46 +1,46 @@
 ## REVIVE HEMP — Neon Expanse Market
 
-**Immersive GitHub Pages storefront** for Revive Hemp at the custom domain `revivehemp.codefeddy.com`.
+**Custom domain GitHub Pages site**: revivehemp.codefeddy.com
 
-Walk the glowing surface markets of Aurora-7. Browse the same premium Revive product tiles featured on [codefeddy.github.io](https://codefeddy.github.io), but fully re-themed around the official neon cyberpunk planet artwork.
+Immersive cyberpunk planetary storefront for Revive Hemp. Shop the same premium products from the original CODE FEDDY board, fully re-themed around the neon crater planet artwork so it feels like you are standing on the planet browsing the stalls.
 
-## Live Site
+## Live (after DNS + Pages)
 https://revivehemp.codefeddy.com
 
-## Setup Custom Domain (revivehemp.codefeddy.com)
+## Products
+The exact same Revive Hemp items from codefeddy.github.io/codeFEDDY with authentic 10% off FEDDY links.
 
-### 1. DNS Configuration (at your DNS provider for codefeddy.com)
-Create a CNAME record:
-- **Name/Host**: `revivehemp`
-- **Value/Target**: `codeFEDDY.github.io.` (include the trailing dot)
-- TTL: as low as possible (or default)
+## Setup for custom domain (Namecheap specific)
+**Current status:** DNS record for revivehemp.codefeddy.com does not exist yet (nslookup returns non-existent domain). This is why you'll see "DNS check unsuccessful" in GitHub Pages settings.
 
-This is a *subdomain* of your existing `codefeddy.com` custom domain.
+### Exact steps for Namecheap (you have Namecheap)
+1. Log into your Namecheap account.
+2. On the left, click **Domain List**.
+3. Find `codefeddy.com` and click **Manage**.
+4. Click the **Advanced DNS** tab.
+5. In the **Host Records** section, click **Add New Record**.
+6. Fill exactly:
+   - **Type**: `CNAME Record`
+   - **Host**: `revivehemp`
+   - **Value**: `codeFEDDY.github.io`
+   - **TTL**: `Automatic`
+7. Click the checkmark (✓) to add it.
+8. Scroll to the bottom and click the green **Save All Changes** button.
 
-### 2. GitHub Repo Configuration
-1. Go to https://github.com/codeFEDDY/revivehemp/settings/pages
-2. Under "Custom domain", enter exactly: `revivehemp.codefeddy.com`
-3. Click **Save**.
-4. Check the box for **Enforce HTTPS** once the certificate is issued (may take a few minutes).
+**Important:**
+- First check if any record already exists with Host = `revivehemp`. If yes, delete conflicting records (especially any URL Redirect, A, or wrong CNAME).
+- Do **not** change the `@` (root) records — those are for codefeddy.com itself.
+- The target **must** be `codeFEDDY.github.io` (your GitHub username), **not** `revivehemp.github.io`. Pointing it to the repo name won't work.
 
-GitHub will automatically create the required DNS TXT validation records if needed (for the apex it may differ, but for subdomains CNAME is standard).
+### After saving
+- Wait 5-30 minutes (use https://dnschecker.org — search `revivehemp.codefeddy.com` and select CNAME).
+- Verify locally: `nslookup -type=CNAME revivehemp.codefeddy.com 8.8.8.8`
+- Go to the revivehemp repo Pages settings: https://github.com/codeFEDDY/revivehemp/settings/pages
+- The error should clear. Enter `revivehemp.codefeddy.com` if not already, then check **Enforce HTTPS**.
 
-The `CNAME` file in this repo is already present with `revivehemp.codefeddy.com`.
+The `CNAME` file in the repo is already correct (`revivehemp.codefeddy.com`).
 
-### 3. Verify
-After DNS propagates (can be 5-60 minutes, sometimes longer), visit https://revivehemp.codefeddy.com
-
-## Features
-- Exact same 7 Revive Hemp products with authentic discount links (`FEDDY` → 10% off)
-- Fully functional product tiles: live search, category filters, sort, one-click **COPY CODE**, and **OPEN WITH FEDDY APPLIED** links
-- Sleekest possible implementation of a "you are on the planet" experience:
-  - Full-bleed custom planet background (derived from reference art)
-  - Canvas starfield + drifting bioluminescent orbs
-  - Glassmorphism cards with neon cyan/purple/magenta glows matching the source image
-  - Subtle 3D tilt on desktop for holographic stall feel
-  - Scanline + atmospheric overlays
-- Pure vanilla HTML/CSS/JS. Zero dependencies. Blazing fast on GitHub Pages.
-- Responsive. Accessible. Keyboard friendly (`/` focuses search).
+The site is fully built with the planet theme from your image (https://imgur.com/a/ptrbue0), immersive effects, product tiles, etc.
 
 ## Local Development
 Just open `index.html` in a browser. For a local server:
@@ -48,12 +48,16 @@ Just open `index.html` in a browser. For a local server:
 python -m http.server 8080
 ```
 
-## Theme
-- Visual language 100% derived from https://imgur.com/a/ptrbue0 (cyberpunk astronaut on glowing crater planet with neon swirls)
-- Product data & discount behavior mirrored from CODE FEDDY
-- Built for maximum immersion with the sleekest lightweight web tech
+## Theme & Tech
+- Full-bleed planet background (your provided artwork, cleaned and used as the immersive surface)
+- Canvas starfield + drifting bioluminescent orbs
+- Glassmorphism cards with neon cyan/purple/magenta glows matching the reference
+- Subtle 3D tilt on desktop for holographic stall feel
+- Scanline + atmospheric overlays
+- Pure vanilla HTML/CSS/JS. Zero dependencies.
+- Search, filters, copy code FEDDY, open with discount applied links (same functionality as the original board)
 
-21+ • Shop responsibly. All sales through official Revive Hemp channels.
+21+ • Shop responsibly. Links use the real revivehemp.store discount structure.
 
 ---
 
