@@ -4,6 +4,15 @@
 
 Walk the glowing surface markets of Aurora-7. Browse the same premium Revive product tiles featured on [codefeddy.github.io](https://codefeddy.github.io), but fully re-themed around the official neon cyberpunk planet artwork.
 
+## Live (after Pages enabled)
+https://codeFEDDY.github.io/revivehemp/
+
+## Quick Start to Enable GitHub Pages
+1. Go to https://github.com/codeFEDDY/revivehemp/settings/pages
+2. Under "Build and deployment" → Source, choose **Deploy from a branch**
+3. Branch: `main`, Folder: `/(root)`
+4. Save. Wait ~1 minute and visit the URL above.
+
 ## Features
 - Exact same 7 Revive Hemp products with authentic discount links (`FEDDY` → 10% off)
 - Fully functional product tiles: live search, category filters, sort, one-click **COPY CODE**, and **OPEN WITH FEDDY APPLIED** links
@@ -16,30 +25,14 @@ Walk the glowing surface markets of Aurora-7. Browse the same premium Revive pro
 - Pure vanilla HTML/CSS/JS. Zero dependencies. Blazing fast on GitHub Pages.
 - Responsive. Accessible. Keyboard friendly (`/` focuses search).
 
-## Live Site
-https://codeFEDDY.github.io/revivehemp/
-
 ## Local Development
 Just open `index.html` in a browser. For a local server:
 ```bash
 python -m http.server 8080
 ```
 
-## Assets
-- `assets/planet-bg-clean.jpg` — cleaned reference planet scene (text-free)
-- `assets/products/*.png` — original high-quality product photography
-- `assets/logos/*` — Revive branding + generated neon logo
-
-## Publishing Notes
-This repo is configured as a GitHub Pages project site:
-- Source branch: `main`
-- Path: `/ (root)`
-- `.nojekyll` is present
-
-If Pages is not live yet, go to repo → Settings → Pages → Build and deployment → Source: **Deploy from a branch** → `main` / `/(root)`.
-
-## Credits & Theme
-- Visual language 100% derived from https://imgur.com/a/ptrbue0
+## Theme
+- Visual language 100% derived from https://imgur.com/a/ptrbue0 (cyberpunk astronaut on glowing crater planet with neon swirls)
 - Product data & discount behavior mirrored from CODE FEDDY
 - Built for maximum immersion with the sleekest lightweight web tech
 
