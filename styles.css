@@ -36,8 +36,8 @@ body {
   position: fixed;
   inset: 0;
   z-index: -3;
-  background: url('assets/planet-bg-clean.jpg') center / cover no-repeat;
-  filter: saturate(1.15) contrast(1.05);
+  background: url('https://i.imgur.com/ULZZ5Ya.jpeg') center / cover no-repeat;
+  filter: saturate(1.18) contrast(1.08) brightness(0.92);
 }
 #planet-overlay {
   position: fixed;

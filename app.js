@@ -9,7 +9,7 @@ const PRODUCTS = [
     perk: "10% off",
     code: "FEDDY",
     url: "https://revivehemp.store/discount/FEDDY?redirect=/products/crumble-with-hte-high-terpene-extract",
-    image: "assets/products/revive-crumble-hte.png",
+    image: "https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/vendor-products-clean/revive-crumble-hte.png",
     tags: ["Revive", "Crumble", "HTE"],
     category: "concentrate"
   },
@@ -20,7 +20,7 @@ const PRODUCTS = [
     perk: "10% off",
     code: "FEDDY",
     url: "https://revivehemp.store/discount/FEDDY?redirect=/products/thca-diamonds",
-    image: "assets/products/revive-live-resin-diamonds.png",
+    image: "https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/vendor-products-clean/revive-live-resin-diamonds.png",
     tags: ["Revive", "Diamonds", "THCA"],
     category: "concentrate"
   },
@@ -31,7 +31,7 @@ const PRODUCTS = [
     perk: "10% off",
     code: "FEDDY",
     url: "https://revivehemp.store/discount/FEDDY?redirect=/products/live-resin-diamonds-and-sauce",
-    image: "assets/products/revive-live-resin-diamonds.png",
+    image: "https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/vendor-products-clean/revive-live-resin-diamonds.png",
     tags: ["Revive", "Live Resin", "Diamonds"],
     category: "concentrate"
   },
@@ -42,7 +42,7 @@ const PRODUCTS = [
     perk: "10% off",
     code: "FEDDY",
     url: "https://revivehemp.store/discount/FEDDY?redirect=/products/1-gram-pre-rolled-joints-3-strains",
-    image: "assets/products/revive-prerolls.png",
+    image: "https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/vendor-products-clean/revive-prerolls.png",
     tags: ["Revive", "Pre-Rolls", "Flower"],
     category: "flower"
   },
@@ -53,7 +53,7 @@ const PRODUCTS = [
     perk: "10% off",
     code: "FEDDY",
     url: "https://revivehemp.store/discount/FEDDY?redirect=/products/hawaiian-get-away-cannaisseur-exotics",
-    image: "assets/products/revive-hawaiian.png",
+    image: "https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/vendor-products-clean/revive-hawaiian.png",
     tags: ["Revive", "Exotics", "Cannaisseur"],
     category: "flower"
   },
@@ -64,7 +64,7 @@ const PRODUCTS = [
     perk: "10% off",
     code: "FEDDY",
     url: "https://revivehemp.store/discount/FEDDY?redirect=/products/bho-badder-no-added-terps-new",
-    image: "assets/products/revive-sugar-crumble.png",
+    image: "https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/vendor-products-clean/revive-sugar-crumble.png",
     tags: ["Revive", "Badder", "BHO"],
     category: "concentrate"
   },
@@ -75,7 +75,7 @@ const PRODUCTS = [
     perk: "10% off",
     code: "FEDDY",
     url: "https://revivehemp.store/discount/FEDDY?redirect=/products/hte-high-terpene-extract-organic-cannabis-terpenes",
-    image: "assets/products/revive-hte.png",
+    image: "https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/vendor-products-clean/revive-hte.png",
     tags: ["Revive", "HTE", "Extract"],
     category: "concentrate"
   }
@@ -103,7 +103,7 @@ function cardHTML(p) {
   return `
   <article class="shop-card" data-id="${p.id}" data-name="${escapeHtml(p.displayName.toLowerCase())}" data-category="${p.category}">
     <a class="card-media js-offer" href="${p.url}" target="_blank" rel="noopener noreferrer sponsored" data-code="${p.code}" data-name="${escapeHtml(p.displayName)}">
-      <img src="${p.image}" alt="${escapeHtml(p.displayName)}" loading="lazy" onerror="this.onerror=null;this.src='assets/planet-bg.jpg';">
+      <img src="${p.image}" alt="${escapeHtml(p.displayName)}" loading="lazy" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/codeFEDDY/codeFEDDY.github.io/main/assets/drop-placeholder.svg';">
       <span class="badge">${escapeHtml(p.category.toUpperCase())}</span>
     </a>
     <div class="card-body">
